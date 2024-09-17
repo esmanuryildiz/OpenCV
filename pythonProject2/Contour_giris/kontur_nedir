@@ -1,0 +1,22 @@
+Contour (çevre, kontur, kapalı alan) bir görüntünün sınırı boyunca aynı renk yoğunluğuna sahip tüm noktaları birleştiren
+çizgi olarak tanımlanır.
+
+Temel Kontur Tespit Algoritması
+1. Yüksek yoğunluklu kontur çizimleri için binary resimler kulkanmalıyız.Resmi önce griye daha sonra binary'ye cevirebiliriz:
+cv2.cvtColor() ve cv2.threshold()
+
+2.Kontur koordinatlarının tespiti: cv2.findConturs
+
+3.Bulunan noktaların çizimi:cv2.drawContours()
+
+Kontur Özellikleri:(üçgen için)
+->Kontur ile alan, çevre, geometri merkezi,çevreleyici geometriler bulabilirim
+
+
+CONVEX HULL
+İçbükey şekillere dışbükey örtüler çizmek anlamına gelir(yıldız->içbükey şekil, beşgen->örütüsü)
+
+
+CONVEXİTY DEFECTS
+Dışbükey kusur demektir. Nesnenin örtüden(convex hull) saptığı yerlerdir.
+
